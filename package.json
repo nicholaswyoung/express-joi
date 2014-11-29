@@ -1,0 +1,14 @@
+{
+  "name": "express-joi",
+  "version": "1.0.0",
+  "description": "Express and Joi, together in perfect harmony.",
+  "main": "app.js",
+  "author": "Nicholas Young <nicholas@nicholaswyoung.com>",
+  "license": "Beerware",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "errbot": "0.0.3",
+    "express": "^4.10.4",
+    "joi": "^4.9.0"
+  }
+}
