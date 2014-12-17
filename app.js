@@ -23,15 +23,13 @@ schema = joi.object().keys({
 });
 
 router.use(function (req, res, next) {
-  joi.validate(
-    req.body,
-    schema, { abortEarly: false, stripUnknown: true },
-    function (err, value) {
-      if (err) return next(errbot.conflict(err.details));
-      req.body = value;
-      next();
-    }
-  );
+  joi.validate(req.body, schema, {
+    abortEarly: false, stripUnknown: true
+  }, function (err, value) {
+    if (err) return next(errbot.conflict(err.details));
+    req.body = value;
+    next();
+  });
 });
 
 router.use(function (req, res) {
